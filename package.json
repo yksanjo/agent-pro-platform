@@ -1,0 +1,38 @@
+{
+  "name": "agent-pro-platform",
+  "version": "1.0.0",
+  "description": "Enterprise-grade AI agent infrastructure platform",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "build": "npm run build --workspaces",
+    "test": "npm run test --workspaces",
+    "test:coverage": "npm run test --workspaces -- --coverage",
+    "lint": "npm run lint --workspaces",
+    "dev": "npm run dev --workspaces",
+    "docker:build": "docker build -t agent-pro-platform:latest .",
+    "docker:run": "docker-compose up -d"
+  },
+  "keywords": [
+    "agent",
+    "ai",
+    "llm",
+    "enterprise",
+    "infrastructure"
+  ],
+  "author": "Yoshi Kondo <yoshi@musicailab.com>",
+  "license": "MIT",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.0",
+    "typescript": "^5.3.3",
+    "jest": "^29.7.0",
+    "@types/jest": "^29.5.12",
+    "ts-jest": "^29.1.2",
+    "eslint": "^8.56.0"
+  }
+}
